@@ -67,7 +67,8 @@ const Login = () => {
                 <input type="submit" value="Login" className="btn" />
                 <div>
                     <p>
-                        Don't have an account? <a href="/register">Register</a>
+                        Don't have an account?{" "}
+                        <a href="/registration">Register</a>
                     </p>
                 </div>
             </form>
