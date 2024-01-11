@@ -1,5 +1,10 @@
 import "./App.css";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+    Route,
+    BrowserRouter as Router,
+    Routes,
+    HashRouter,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import CreateTask from "./pages/CreateTask";
 import TaskDetails from "./pages/TaskDetails";
@@ -11,7 +16,7 @@ import UserProfile from "./pages/UserProfile";
 function App() {
     return (
         <AuthContextProvider>
-            <Router>
+            <HashRouter>
                 <Routes>
                     <Route path="/registration" element={<Registration />} />
                     <Route path="/login" element={<Login />} />
@@ -22,7 +27,7 @@ function App() {
                         <Route path="profile" element={<UserProfile />} />
                     </Route>
                 </Routes>
-            </Router>
+            </HashRouter>
         </AuthContextProvider>
     );
 }
